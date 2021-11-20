@@ -1,10 +1,10 @@
 #searchbox input {
     padding: 4px 10px;
     width: 100%;
-    color: var(--primary);
+    color: map-get($colors, 'dark-grey');
     font-weight: bold;
-    border: 2px solid var(--tertiary);
-    border-radius: var(--radius);
+    border: 2px solid map-get($colors, 'light-grey');
+    border-radius: $border-radius-default;
 }
 
 #searchbox input:focus {
@@ -13,7 +13,7 @@
 
 #searchResults li {
     list-style: none;
-    border-radius: var(--radius);
+    border-radius: $border-radius-default;
     padding: 10px;
     margin: 10px 0;
     position: relative;
@@ -21,6 +21,7 @@
 }
 
 #searchResults {
+    padding: 0;
     margin: 10px 0;
     width: 100%;
 }

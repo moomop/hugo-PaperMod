@@ -51,6 +51,12 @@
 <article class="{{ $class }}">
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+  <div class="entry-thumbnail">
+    {{ if $page.Params.thumbnailImage }}
+    <img alt="doodle for post" src="{{ .Permalink }}{{ $page.Params.thumbnailImage }}"/>
+    {{end}}
+  </div>
+  <div class="entry-text-wrapper">
   <header class="entry-header">
     <h2>
       {{- .Title }}
@@ -66,6 +72,7 @@
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
   </footer>
+  </div>
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>

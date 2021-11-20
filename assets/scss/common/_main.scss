@@ -1,0 +1,84 @@
+.main {
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: 4*$regular-margin auto 0 auto;
+    padding: $regular-padding;
+    }
+
+.main article:first-of-type {margin-top: 0 !important;}
+.main header:first-of-type {margin-top: 0 !important;}
+.main h1:first-of-type {margin-top: 0 !important;}
+
+
+.pagination {
+    display: flex;
+}
+
+.pagination a {
+    border: 1px solid map-get($colors, 'cn-coral');
+    border-radius: $border-radius-default;
+    font-size: $small-text;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: $regular-padding/3 $regular-padding;
+    transition: transform 0.1s;
+}
+
+.pagination a:hover {
+    color: map-get($colors, 'cn-bright-teal');
+    border: 1px solid darken(map-get($colors, 'cn-bright-teal'), 16);
+    border-radius: $border-radius-default;
+    text-decoration: none;
+    
+}
+
+.pagination .next {
+    margin-inline-start: auto;
+}
+
+// these are the icons under the intro post
+
+.social-icons {
+    padding: 12px 0;
+}
+
+.social-icons a:not(:last-of-type) {
+    margin-inline-end: 12px;
+}
+
+.social-icons a svg {
+    height: 26px;
+    width: 26px;
+}
+
+// check this - move to basic elements??
+
+code {
+    direction: ltr;
+}
+
+
+// check these - move to post-single??
+
+div.highlight,
+pre {
+    position: relative;
+}
+
+.copy-code {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(78, 78, 78, 0.8);
+    border-radius: $border-radius-default;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+div.highlight:hover .copy-code,
+pre:hover .copy-code {
+    display: block;
+}

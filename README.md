@@ -88,3 +88,6 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   [**Feather Icons**](https://github.com/feathericons/feather)
 -   [**Simple Icons**](https://github.com/simple-icons/simple-icons)
 -   **All Contributors and Supporters**
+
+## Notes on moomop fork
+- privacy.md required in top level of content.

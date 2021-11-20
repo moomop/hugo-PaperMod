@@ -1,0 +1,55 @@
+.archive-posts {
+    max-width: 100%;
+//    font-size: $regular-text;
+}
+
+//.archive-year {
+//    margin-top: 40px;
+//}
+
+.archive-year:not(:last-of-type) {
+    border-bottom: 2px solid map-get($colors, 'light-grey');
+}
+
+// .archive-month {
+//     display: flex;
+//     align-items: flex-start;
+//     padding: 10px 0;
+// }
+
+//.archive-month-header {
+//margin: 25px 0;
+//    width: 200px;
+//}
+
+// .archive-month:not(:last-of-type) {
+//     border-bottom: 1px solid map-get($colors, 'light-grey');
+// }
+// 
+.archive-entry {
+  position: relative;
+  //padding: 5px;
+  margin: 10px 0;
+}
+
+//.archive-entry-title {
+//    margin: 5px 0;
+//    font-weight: 400;
+//}
+
+.archive-count,
+.archive-meta {
+    color: map-get($colors, 'mid-grey');
+    font-size: $small-text;
+}
+
+
+// adding custom marker (will not be needed when safari supports content for ::marker class)
+ul.archive-posts li::before {
+    content: "\f0da";
+    font-family: "FontAwesome";
+    color: map-get($colors, 'cn-bright-teal');
+    position: absolute;
+    margin-left: -1.5em;
+    padding: 0;
+    }

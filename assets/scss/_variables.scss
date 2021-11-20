@@ -1,0 +1,71 @@
+
+
+
+// Colors
+$colors: (
+    'dark-grey': #4e4e4e,
+    'mid-grey':#767676,
+    'light-grey':#afafaf,
+    'cn-coral':#e28e6e,
+    'cn-dark-teal':#3b464c,
+    'cn-bright-teal':#72afa9,
+    'cn-pale-cream':#fcf9f5,
+    'cn-latte':#f7f2e8,
+    'code-bg': #393033, 
+);
+
+// Font families
+$open-sans:            'Open Sans';
+$open-sans-sans-serif: 'Open Sans', sans-serif;
+$menlo:                 Menlo, Consolas, monospace;
+$arvo:                 'Arvo', serif;
+$lato:                 'Lato', sans-serif;
+
+
+$font-families: (
+   'headings':          $arvo,
+
+);
+
+$extra-large-text: 2.3rem;
+$large-text: 1.7rem;
+$regular-text: 1rem;
+$small-text: 0.8rem;
+
+$regular-line-height: 1.7;
+$regular-margin: 1.7em;
+$regular-padding: 1.2em;
+
+$border-radius-default: 4px;
+
+// for @media queries
+
+$screen-min: (
+    'xs-min': 320px,
+    'sm-min': 480px,
+    'md-min': 768px,
+    'lg-min': 1024px,
+    'xlg-min': 1280px
+);
+$screen-max: (
+    'xs-max': map-get($screen-min, sm-min) - 1,
+    'sm-max': map-get($screen-min, md-min) - 1,
+    'md-max': map-get($screen-min, lg-min) - 1,
+    'lg-max': map-get($screen-min, xlg-min) - 1
+);
+// Calculate screens
+$screen: map-merge($screen-min, $screen-max);
+
+// use these for final queries
+$mobile-and-down: "only screen and (max-width : #{map-get($screen, xs-max)})" !default;
+$mobile-and-up: "only screen and (min-width : #{map-get($screen, xs-min)})" !default;
+$tablet-and-down:  "only screen and (max-width : #{map-get($screen, sm-max)})" !default;
+$tablet-only:      "only screen and (min-width : #{map-get($screen, sm-min)}) and (max-width : #{map-get($screen, sm-max)})" !default;
+$tablet-and-up:    "only screen and (min-width : #{map-get($screen, sm-min)})" !default;
+$laptop-and-down: "only screen and (max-width : #{map-get($screen, md-max)})" !default;
+$laptop-only:     "only screen and (min-width : #{map-get($screen, md-min)}) and (max-width : #{map-get($screen, md-max)})" !default;
+$laptop-and-up:   "only screen and (min-width : #{map-get($screen, md-min)})" !default;
+$desktop-and-down:  "only screen and (max-width : #{map-get($screen, lg-max)})" !default;
+$desktop-only:      "only screen and (min-width : #{map-get($screen, lg-min)}) and (max-width : #{map-get($screen, lg-max)})" !default;
+$desktop-and-up:    "only screen and (min-width : #{map-get($screen, lg-min)})" !default;
+$widedesktop-and-up:   "only screen and (min-width : #{map-get($screen, xlg-min)})" !default;

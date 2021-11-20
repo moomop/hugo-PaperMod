@@ -1,0 +1,75 @@
+
+.pullquote {
+    display: block;
+    position: relative;
+    margin: $regular-margin auto;
+    background-image: radial-gradient(circle, map-get($colors, 'cn-pale-cream') 50%, white);
+    padding: 1em 0.3em;
+    text-align: center;
+    
+}
+
+.pullquote q {
+    font-size: 1.3em;
+    font-style: italic;
+    }
+
+aside.pullquote::before {
+    content: "";
+    background-color: map-get($colors, 'cn-bright-teal');
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    top: -2px;
+    left: 40%;
+
+}
+
+aside.pullquote::after {
+    content: "";
+    background-color: map-get($colors, 'cn-bright-teal');
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    bottom: -2px;
+    left: 40%;
+
+}
+
+
+.content-box {
+    display: block;
+    position: relative;
+    margin: $regular-margin auto;
+    background-color: map-get($colors, 'cn-pale-cream');
+    padding: $regular-padding;
+    border-radius: $border-radius-default;
+}
+
+
+aside.content-box::before {
+    content: "";
+    background-color: map-get($colors, 'cn-bright-teal');
+    position: absolute;
+    width: 30%;
+    height: 4px;
+    top: -2px;
+    left: 0%;
+
+}
+
+aside.content-box::after {
+    content: "";
+    background-color: map-get($colors, 'cn-bright-teal');
+    position: absolute;
+    width: 30%;
+    height: 4px;
+    bottom: -2px;
+    right: 0;
+   
+}
+
+.content-box :first-child {margin-top: 0 !important;}
+.content-box :last-child {margin-bottom: 0 !important;}
+
+
