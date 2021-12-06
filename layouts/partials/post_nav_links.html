@@ -4,14 +4,14 @@
 <nav class="paginav">
   {{- with $pages.Next . }}
   <a class="prev" href="{{ .Permalink }}">
-    <span class="title"><i class="fas fa-arrow-left"></i> PREVIOUS POST</span>
+    <span class="title"><i class="fas fa-arrow-left"></i>&nbsp;NEXT POST</span>
     <br>
     <span>{{- .Name -}}</span>
   </a>
   {{- end }}
   {{- with $pages.Prev . }}
   <a class="next" href="{{ .Permalink }}">
-    <span class="title">NEXT POST <i class="fas fa-arrow-right"></i></span>
+    <span class="title">PREVIOUS POST&nbsp;<i class="fas fa-arrow-right"></i></span>
     <br>
     <span>{{- .Name -}}</span>
   </a>
