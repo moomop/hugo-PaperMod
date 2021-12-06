@@ -68,7 +68,7 @@
 {{- end }}
 
 {{- with .Site.Params.label.icon }}
-<link rel="preload" href="{{ . }}" as="image">
+<link rel="preload" href="{{ . | absURL  }}" as="image">
 {{- end }}
 
 {{- /* Search */}}
