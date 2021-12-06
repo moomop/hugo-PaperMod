@@ -39,7 +39,7 @@
 </script>
 {{- end }}
 
-<header class="header">
+<header class="header" id="header">
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (.Site.Params.label.text | default .Site.Title) }}
@@ -100,6 +100,7 @@
             </span>
         </div>
         {{- $currentPage := . }}
+
         <ul id="menu">
             {{- range .Site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
@@ -108,9 +109,9 @@
             <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
-                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
-                        {{- .Pre }}
-                    <span class="sr-only">{{- .Name -}}</span>
+                    <span {{- if eq $menu_item_url $page_url }} class="is-current-page" {{- end }}>
+                    <span class=menu-item-logo>{{- .Pre }}</span>
+                    <span>{{- .Name -}}</span>
                         {{ .Post -}}
                     </span>
                 </a>

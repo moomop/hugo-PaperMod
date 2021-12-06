@@ -85,8 +85,12 @@
 {{- end }}
 {{- end -}}
 
-{{- /* fontawesome javascript */}}
+{{- /* fontawesome javascript */ -}}
 <script src="https://kit.fontawesome.com/9855f4dbfa.js" crossorigin="anonymous"></script>
+
+{{- /* theme specific javascript */ -}}
+{{- $theme_script := (resources.Get "js/theme.js") }}
+<script src="{{ $theme_script.RelPermalink }}"></script>
 
 {{- /* Highlight.js */}}
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
