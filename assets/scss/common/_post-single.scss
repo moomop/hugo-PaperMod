@@ -231,7 +231,6 @@ h6:hover .anchor {
 
 .post-footer {
     margin-top: $regular-margin;
-    font-size: $small-text;
 }
 
 // not used 
@@ -300,11 +299,10 @@ h6:hover .anchor {
 .paginav a:hover {
     color: map-get($colors, 'dark-grey');
     text-decoration: none;
-    }
+}
 
 .paginav .title {
     letter-spacing: 1px;
     text-transform: uppercase;
-    
-    }
+}
 

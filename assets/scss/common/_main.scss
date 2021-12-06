@@ -14,21 +14,14 @@
 }
 
 .pagination a {
-    border: 1px solid map-get($colors, 'cn-coral');
-    border-radius: $border-radius-default;
-    font-size: $small-text;
-    display: block;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: $regular-padding/3 $regular-padding;
-    transition: transform 0.1s;
+    color: map-get($colors, 'mid-grey');
+    text-decoration: none;
+    padding: 0;
+    letter-spacing: 1px;
 }
 
 .pagination a:hover {
-    color: map-get($colors, 'cn-bright-teal');
-    border: 1px solid darken(map-get($colors, 'cn-bright-teal'), 16);
-    border-radius: $border-radius-default;
+    color: map-get($colors, 'dark-grey');
     text-decoration: none;
     
 }
