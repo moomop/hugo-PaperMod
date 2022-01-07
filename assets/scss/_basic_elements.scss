@@ -1,17 +1,37 @@
 
+// css reset and defaults
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
 
 html, body {
+    height: 100%;
+}  
+
+html {
     font-family:    "Lato", sans-serif;
     font-weight:    400;
     font-size:      18px;
     line-height:    $regular-line-height;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
     word-break:     break-word;
     background:     white;
     color: map-get($colors, 'dark-grey');
-    margin: 0;
-    padding: 0;
-    -webkit-text-size-adjust: 100%;
 }
+
+img, picture, video, canvas, svg, iframe, object {
+    display: block;
+    max-width: 100%;
+  }
 
 
  /* 
