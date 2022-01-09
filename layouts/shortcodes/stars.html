@@ -1,0 +1,13 @@
+{{- $rating := .Get 0 -}}
+{{- $stars_string := "" -}}
+{{- range $i := (seq 5) -}}
+{{- if le $i $rating -}}
+{{- $stars_string = print $stars_string "<i class=\"fas fa-star\"></i>" -}}
+{{- else if lt $i (add $rating 1) -}}
+{{- $stars_string = print $stars_string "<i class=\"fas fa-star-half-alt\"></i>" -}}
+{{- else -}}
+{{- $stars_string = print $stars_string "<i class=\"far fa-star\"></i>" -}}
+{{- end -}}
+{{- end -}}
+<span style="white-space:nowrap;">{{- safeHTML $stars_string -}}</span>
+{{- "" -}}
