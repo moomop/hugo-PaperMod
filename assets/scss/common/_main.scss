@@ -1,5 +1,5 @@
 .main {
-    max-width: calc(var(--main-width) + var(--gap) * 2);
+    max-width: $post-width;
     margin: 4*$regular-margin auto 0 auto;
     padding: $regular-padding;
     }

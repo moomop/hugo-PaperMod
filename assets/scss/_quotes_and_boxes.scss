@@ -40,9 +40,9 @@ aside.pullquote::after {
 .content-box {
     display: block;
     position: relative;
-    margin: $regular-margin auto;
+    margin: 1.5*$regular-margin auto;
     background-color: map-get($colors, 'cn-pale-cream');
-    padding: $regular-padding;
+    padding: $regular-margin $regular-padding;
     border-radius: $border-radius-default;
 }
 
