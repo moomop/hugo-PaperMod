@@ -90,4 +90,4 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 -   **All Contributors and Supporters**
 
 ## Notes on moomop fork
-- privacy.md required in top level of content.
+- privacy.md and site-credits.md required in top level of content.
