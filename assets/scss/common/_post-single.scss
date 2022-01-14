@@ -12,7 +12,7 @@
     margin-bottom: 5px;
 }
 
-.post-meta,
+.post-meta
    {
     color: map-get($colors, 'mid-grey');
     font-size: $small-text;
@@ -231,6 +231,10 @@ h6:hover .anchor {
 
 .post-footer {
     margin-top: $regular-margin;
+}
+
+.post-footer h3 {
+    margin-top: 0;
 }
 
 // not used 

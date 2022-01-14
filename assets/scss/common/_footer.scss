@@ -2,14 +2,15 @@
     font-size: $small-text;
     color: map-get($colors, 'light-grey');
     margin: auto;
-    padding: $regular-padding;
+    padding: $regular-margin $regular-padding;
     text-align: center;
     }
 
-.footer span {
-    margin-inline-start: 1px;
-    margin-inline-end: 1px;
-}
+// why would these be needed?
+// .footer span {
+//    margin-inline-start: 1px;
+//    margin-inline-end: 1px;
+// }
 
 .footer span:last-child {
     white-space: nowrap;
@@ -22,6 +23,7 @@
 .footer a:hover {
     color: map-get($colors, 'mid-grey');
     }
+    
 
 // .top-link is the return to top button
 

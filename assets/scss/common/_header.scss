@@ -31,8 +31,8 @@
 
 .logo {
     display: flex;
-    margin: 0 $regular-padding;
-    padding: 0;
+    margin: 0;
+    padding: 0 $regular-padding;
     flex-wrap: inherit;
 }
 
@@ -47,7 +47,7 @@
 
 
 #menu {
-        margin: 0 $regular-padding;;
+        margin: 0;
         padding: 0;
         display: flex;
         list-style: none;
