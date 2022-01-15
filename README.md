@@ -91,3 +91,9 @@ Release ChangeLog has info about stuff added: **[Releases](https://github.com/ad
 
 ## Notes on moomop fork
 - privacy.md and site-credits.md required in top level of content.
+
+### License
+Unless otherwise stated contents of this theme are generally licensed under the MIT license (see LICENSE file). Some items may be included that
+are based on code that is licensed under other licenses, in those cases the terms of those licenses apply.
+- Items from https://github.com/tabsteveyang/photo-grid-box-vanilla are licensed under the Apache license (see LICENSE-apache)
+>>>>>>> Add Image Gallery/Lightbox

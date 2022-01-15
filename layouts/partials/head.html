@@ -89,8 +89,17 @@
 <script src="https://kit.fontawesome.com/9855f4dbfa.js" crossorigin="anonymous"></script>
 
 {{- /* theme specific javascript */ -}}
+
 {{- $theme_script := (resources.Get "js/theme.js") }}
-<script src="{{ $theme_script.RelPermalink }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ "css/photo-grid-box-vanilla.min.css" | absURL }}" />
+<script src="{{ "js/PhotoGridBox.js" |absURL }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ "PhotoSwipe/photoswipe.css" | absURL }}" />
+<link rel="stylesheet" type="text/css" href="{{ "PhotoSwipe/default-skin/default-skin.css" | absURL }}" />
+<script src="{{ "PhotoSwipe/photoswipe-ui-default.min.js" |absURL }}"></script>
+<script src="{{ "PhotoSwipe/photoswipe.min.js" |absURL }}"></script>
+<script src="{{ $theme_script.Permalink }}"></script>
+
+
 
 {{- /* Highlight.js */}}
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
