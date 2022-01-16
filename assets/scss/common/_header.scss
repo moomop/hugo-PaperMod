@@ -81,7 +81,7 @@
     flex-direction: column;
     position: absolute;
     top: 80px;
-    right: 0px;
+    right: $regular-padding;
     background-color: map-get($colors, 'cn-dark-teal');
     border: 1px solid darken(map-get($colors, 'cn-dark-teal'), 15);
     box-shadow: 0 3px 10px 0px rgba(0,0,0,0.6);

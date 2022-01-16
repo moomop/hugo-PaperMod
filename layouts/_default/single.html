@@ -33,11 +33,11 @@
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
   </div>
-  <hr>
   {{- end }}
 
   <footer class="post-footer">
     {{- if .Params.tags }}
+  <hr>
   <h3>Tagged in:</h3>
     <ul class="post-tags">
       {{- range ($.GetTerms "tags") }}
