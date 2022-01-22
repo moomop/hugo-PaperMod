@@ -50,7 +50,7 @@ dl,
 ol,
 ul  {
     margin-top: 0;
-    margin-bottom: $regular-margin;
+    margin-bottom: $regular-padding;
 }
 
 
@@ -240,7 +240,7 @@ img {
 // figures
 
 figure {
-margin: $regular-margin auto;
+margin: 1.2*$regular-margin auto;
 
     figcaption {
     margin: ($regular-margin)/3 0 0;

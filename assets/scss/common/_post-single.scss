@@ -62,7 +62,7 @@
 .post-content { 
     :is(p) + :is(ol, ul)
     {
-     margin-top: -$regular-margin + 0.1em;
+     margin-top: -$regular-padding + 0.1em;
     }
 }
 
