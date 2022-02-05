@@ -21,7 +21,6 @@ function setup_gallery(id) {
       img = {
                 src: gallery_image_element.getAttribute('data-thumbnail_src'),
                 payload: {
-                    title: gallery_image_element.getAttribute('data-caption'),
                     gallery_id: id,
                     image_id: image_id
                 }
@@ -46,7 +45,8 @@ function setup_gallery(id) {
     var imgOnClick = function(e, imgConfig) {
         console.log('img clicked!', e, imgConfig)
         var options = {
-            index: imgConfig.payload.image_id
+            index: imgConfig.payload.image_id,
+            shareEl: false,
         };
         var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, pswp_items, options);
         gallery.init();

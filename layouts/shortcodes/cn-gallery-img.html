@@ -1,9 +1,9 @@
 
 {{- $src := .Get "src" -}}
 {{- $image_res := .Page.Resources.GetMatch $src -}}
-{{- $thumbnail_res:= $image_res.Resize "x200" -}}
+{{- $thumbnail_res:= $image_res.Resize "x300" -}}
+{{- if not ( .Page.Scratch.Get "pswp_divs_added" ) }}
 
-{{ if eq .Ordinal 1 }}
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="pswp__bg"></div>
     <div class="pswp__scroll-wrap">
@@ -40,8 +40,11 @@
             </div>
         </div>
     </div> 
-  </div>
-{{ end }}
+</div>
+
+{{ end -}}
+{{- .Page.Scratch.Set "pswp_divs_added" "True" -}}
+
 
 <div class="gallery-image gallery-id-{{.Get "gallery-id" |default 1}}"
 data-image_src="{{$image_res.Permalink}}"
