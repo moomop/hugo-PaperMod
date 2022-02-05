@@ -61,7 +61,7 @@ function setup_gallery(id) {
       }
 
     const box = new PhotoGridBox(gallery_div, imgs, imgOnClick, panelHTMLSetter);
-    box.setShowUnCompleteRow(true);
+    box.setShowUnCompleteRow(false);
 
     var pswpElement = document.querySelectorAll('.pswp')[0];
 }
