@@ -285,7 +285,7 @@ box-shadow: 1px 1px 1px rgba(0,0,0,.2), 0 1px 0 0 #fff inset;
 blockquote {
     border-left: 4px solid map-get($colors, 'cn-bright-teal');
     background-color:  map-get($colors, 'cn-pale-cream');
-    background-image: url("/img/quote.svg");
+    background-image: url('quote.svg');
     background-repeat: no-repeat;
     background-size: 4em 4em;
     background-position: 0.3em 0.3em;

@@ -52,7 +52,7 @@
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style */ -}}
-{{- $stylesheet := (slice $core $extended $cn_style) | resources.Concat "assets/css/stylesheet.css" | minify }}
+{{- $stylesheet := (slice $core $extended $cn_style) | resources.Concat "css/stylesheet.css" | minify }}
 
 {{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
@@ -91,10 +91,7 @@
 {{- /* theme specific javascript */ -}}
 
 {{- $theme_script := (resources.Get "js/theme.js") }}
-<link rel="stylesheet" type="text/css" href="{{ "css/photo-grid-box-vanilla.min.css" | absURL }}" />
 <script src="{{ "js/PhotoGridBox.js" |absURL }}"></script>
-<link rel="stylesheet" type="text/css" href="{{ "PhotoSwipe/photoswipe.css" | absURL }}" />
-<link rel="stylesheet" type="text/css" href="{{ "PhotoSwipe/default-skin/default-skin.css" | absURL }}" />
 <script src="{{ "PhotoSwipe/photoswipe-ui-default.min.js" |absURL }}"></script>
 <script src="{{ "PhotoSwipe/photoswipe.min.js" |absURL }}"></script>
 <script src="{{ $theme_script.Permalink }}"></script>
