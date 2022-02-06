@@ -28,10 +28,22 @@ body {
     color: map-get($colors, 'dark-grey');
 }
 
-img, picture, video, canvas, svg, iframe, object {
+img, picture, video, canvas, svg, iframe, object, audio {
     display: block;
     max-width: 100%;
   }
+
+audio {
+    width: 100%;
+    border-radius: $border-radius-default;
+}
+
+// make figure imgs take up % specified 
+
+figure img {
+    width: 100%;
+    height: auto;
+}
 
 
  /* 
