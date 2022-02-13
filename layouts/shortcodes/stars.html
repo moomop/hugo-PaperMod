@@ -1,6 +1,7 @@
 {{- $rating := .Get 0 -}}
+{{- $max_rating := default 5 (.Get 1) -}}
 {{- $stars_string := "" -}}
-{{- range $i := (seq 5) -}}
+{{- range $i := (seq $max_rating) -}}
 {{- if le $i $rating -}}
 {{- $stars_string = print $stars_string "<i class=\"fas fa-star\"></i>" -}}
 {{- else if lt $i (add $rating 1) -}}
