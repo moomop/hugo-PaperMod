@@ -249,7 +249,7 @@ a.pswp__share--download:hover {
   left: 0;
   top: 0;
   height: 44px;
-  font-size: 13px;
+  font-size: 1em;
   line-height: 44px;
   color: #FFF;
   opacity: 0.75;
@@ -268,16 +268,16 @@ a.pswp__share--download:hover {
   min-height: 44px; }
   .pswp__caption small {
     font-size: 11px;
-    color: #BBB; }
+    color: map-get($colors, 'cn-pale-cream'); }
 
 .pswp__caption__center {
   text-align: left;
   max-width: 420px;
   margin: 0 auto;
-  font-size: 13px;
-  padding: 10px;
+  font-size: 1em;
+  padding: 10px 10px 2em 10px;
   line-height: 20px;
-  color: #CCC; }
+  color: map-get($colors, 'cn-pale-cream'); }
 
 .pswp__caption--empty {
   display: none; }
