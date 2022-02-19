@@ -4,15 +4,18 @@
 <nav class="paginav">
   {{- with $pages.Next . }}
   <a class="prev" href="{{ .Permalink }}">
-    <span class="title"><i class="fas fa-arrow-left"></i>&nbsp;NEXT POST</span>
-    <br>
+    <span class="title left"><svg aria-hidden="true" class="text-icon" fill="currentColor"> 
+      <use href="{{ "icons.svg" |absURL }}#arrow-left"></use></svg>
+      &nbsp;NEXT POST
+    </span>
     <span>{{- .Name -}}</span>
   </a>
   {{- end }}
   {{- with $pages.Prev . }}
   <a class="next" href="{{ .Permalink }}">
-    <span class="title">PREVIOUS POST&nbsp;<i class="fas fa-arrow-right"></i></span>
-    <br>
+    <span class="title right"><span>PREVIOUS POST&nbsp;</span><svg aria-hidden="true" class="text-icon" fill="currentColor"> 
+      <use href="{{ "icons.svg" |absURL }}#arrow-right"></use> </svg>
+    </span>
     <span>{{- .Name -}}</span>
   </a>
   {{- end }}

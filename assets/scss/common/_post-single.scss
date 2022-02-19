@@ -84,12 +84,16 @@ h6:hover .anchor {
 
 // adding custom marker (will not be needed when safari supports content for ::marker class)
 .post-content ul li::before {
-    content: "\f0da";
-    font-family: "FontAwesome";
-    color: map-get($colors, 'cn-bright-teal');
+    content: '';
+    background-image: url('caret-right-solid.svg');
+    display: inline-flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+    margin-left: -2em;
     position: absolute;
-    margin-left: -1.5em;
-    padding: 0;
+    margin-top: 0.35em;
     }
 
 
@@ -305,8 +309,26 @@ h6:hover .anchor {
     text-decoration: none;
 }
 
-.paginav .title {
+.paginav .title.right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
+.paginav .title.left {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.text-icon {
+    width: 1.5em;
+    height: 1.5em;
+    align-self: flex-end;
+    }
