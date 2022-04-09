@@ -110,7 +110,7 @@
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="is-current-page" {{- end }}>
-                    <span class=menu-item-logo>{{- .Pre }}</span>
+                    <span class=menu-item-logo><svg aria-hidden="true" class="big-content-icon"><use href="{{ "icons.svg" | absURL}}#{{ .Pre }}"></use></svg></span>
                     <span>{{- .Name -}}</span>
                         {{ .Post -}}
                     </span>

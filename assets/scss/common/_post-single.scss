@@ -86,15 +86,12 @@ h6:hover .anchor {
 .post-content ul li::before {
     content: '';
     background-image: url('caret-right-solid.svg');
-    display: inline-flex;
-    align-items: center;
     background-repeat: no-repeat;
-    height: 1em;
-    width: 1em;
-    margin-left: -2em;
+    height: 1.1em;
+    width: 1.1em;
     position: absolute;
-    margin-top: 0.35em;
-    }
+    margin: 0.35em 0 0 -1.6em;
+}
 
 
 //.post-content table {
@@ -166,7 +163,7 @@ h6:hover .anchor {
 }
 
 .post-content code {
-    margin: auto 4px;
+    margin: auto 0;
     padding: 4px 6px;
     font-size: 0.78em;
     line-height: 1.5;
@@ -176,8 +173,8 @@ h6:hover .anchor {
 
 .post-content pre code {
     display: block;
-    margin: auto 0;
-    padding: 10px;
+    margin: 1.2*$regular-margin auto;
+    padding: $regular-padding;
     color: rgb(213, 213, 214);
     background: 0 0;
     border-radius: 0;
@@ -279,7 +276,7 @@ h6:hover .anchor {
 .paginav {
     margin: $regular-margin 0;
     display: flex;
-    gap: $regular-padding;
+    gap: 1em;
 }
 
 .paginav .prev,
@@ -309,26 +306,27 @@ h6:hover .anchor {
     text-decoration: none;
 }
 
-.paginav .title.right {
+.navarrowright {
     display: flex;
-    flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-right: -3px;
 }
 
-.paginav .title.left {
+.navarrowleft {
     display: flex;
-    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-left: -3px;
 }
 
-.text-icon {
-    width: 1.5em;
-    height: 1.5em;
-    align-self: flex-end;
-    }
+// For overflowing tables
+.overflow-wrapper {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

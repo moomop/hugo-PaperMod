@@ -1,0 +1,4 @@
+{{- $icon := .Get 0 -}}
+{{- $screenreader_text := .Get 1 -}}
+<svg aria-hidden="true" class="content-icon"><use href="{{ "icons.svg" |absURL}}#{{ $icon }}"></use></svg>
+{{- with $screenreader_text -}} <span class="sr-only"> {{ . }} </span> {{- end -}}

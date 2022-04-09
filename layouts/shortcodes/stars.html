@@ -1,14 +1,18 @@
 {{- $rating := .Get 0 -}}
 {{- $max_rating := default 5 (.Get 1) -}}
-{{- $stars_string := "" -}}
+<div style="width: max-content;">   
 {{- range $i := (seq $max_rating) -}}
 {{- if le $i $rating -}}
-{{- $stars_string = print $stars_string "<i class=\"fas fa-star\"></i>" -}}
-{{- else if lt $i (add $rating 1) -}}
-{{- $stars_string = print $stars_string "<i class=\"fas fa-star-half-alt\"></i>" -}}
+<svg aria-hidden="true" class="content-icon"><use href="{{ "icons.svg" |absURL}}#star-full"></use></svg>
+{{- else if le (sub $i 0.25) $rating -}}
+<svg aria-hidden="true" class="content-icon"><use href="{{ "icons.svg" |absURL}}#star-three-quarter"></use></svg>
+{{- else if le (sub $i 0.5) $rating -}}
+<svg aria-hidden="true" class="content-icon"><use href="{{ "icons.svg" |absURL}}#star-half"></use></svg>
+{{- else if le (sub $i 0.75) $rating -}}
+<svg aria-hidden="true" class="content-icon"><use href="{{ "icons.svg" |absURL}}#star-one-quarter"></use></svg>
 {{- else -}}
-{{- $stars_string = print $stars_string "<i class=\"far fa-star\"></i>" -}}
+<svg aria-hidden="true" class="content-icon"><use href="{{ "icons.svg" |absURL}}#star-empty"></use></svg>
 {{- end -}}
 {{- end -}}
-<span style="white-space:nowrap;">{{- safeHTML $stars_string -}}</span>
-{{- "" -}}
+</div>
+<span class="sr-only"> {{ $rating }} stars out of {{ $max_rating }} </span>
