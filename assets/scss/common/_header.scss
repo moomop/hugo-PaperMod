@@ -1,8 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    background-color: map-get($colors, 'cn-dark-teal');
-    opacity: 97%;
+    background-color: map-get($colors, 'cn-dark-teal opacity 0.96');
     z-index: 1;
     box-shadow: 0 3px 10px 0px rgba(0,0,0,0.6);
     top: 0;

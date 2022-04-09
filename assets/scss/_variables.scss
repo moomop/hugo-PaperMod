@@ -8,6 +8,9 @@ $colors: (
     'light-grey':#afafaf,
     'cn-coral':#e28e6e,
     'cn-dark-teal':#3b464c,
+    // workaround for apparent firefox bug causing logo to disappear if
+    // opacity applied to nav
+    'cn-dark-teal opacity 0.96': #3b464cf5, 
     'cn-bright-teal':#72afa9,
     'cn-pale-cream':#fcf9f5,
     'cn-latte':#f7f2e8,
