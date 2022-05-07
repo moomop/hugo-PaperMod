@@ -4,6 +4,8 @@
     background-color: map-get($colors, 'cn-dark-teal opacity 0.96');
     z-index: 1;
     box-shadow: 0 3px 10px 0px rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     top: 0;
     border-bottom: 1px solid darken(map-get($colors, 'cn-dark-teal'), 15);
 }
