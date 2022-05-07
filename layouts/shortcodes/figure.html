@@ -1,3 +1,5 @@
+{{- $src := .Get "src" -}}
+{{- $res := .Page.Resources.GetMatch $src -}}
 <figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
            {{- if eq (.Get "align") "center" }}align-center {{ end }}
            {{- with .Get "class" }}{{ . }}{{- end }}"
@@ -9,8 +11,10 @@
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+         {{if and (eq $res.ResourceType "image") (ne $res.MediaType.SubType "svg") }}
+         width="{{$res.Width}}"
+         height="{{$res.Height}}"
+         {{ end }}
     /> <!-- Closing img tag -->
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
