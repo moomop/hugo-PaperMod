@@ -53,17 +53,39 @@
         display: flex;
         list-style: none;
         word-break: keep-all;
-        overflow-x: auto;
         white-space: nowrap;
 }
-    
-    
+
 #menu a {
-        display: block;
-        font-size: $regular-text;
-        padding: $regular-padding/3 $regular-padding;
+    display: block;
+    font-size: $regular-text;
+    padding: $regular-padding/3 $regular-padding;
+    position: relative;
+}
+
+#menu li {
+    position: relative;
+}
+
+#menu li::after {
+    content: "";
+    position: absolute;
+    background-color: map-get($colors, 'cn-coral');
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 100%;
+    left: calc(50% - 0.35rem);
+    bottom: -13px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
     
+#menu li:hover::after {
+    opacity: 1.0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
 #menu .menu-item-logo {
         margin-right: 0.3rem;
 }
@@ -92,6 +114,10 @@
 #menu a {
     font-size: $regular-text;
     padding: $regular-padding/3 $regular-padding;
+}
+
+#menu li::after {
+    display: none;
 }
 
 }

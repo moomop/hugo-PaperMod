@@ -44,7 +44,7 @@
         <div class="logo">
             {{- $label_text := (.Site.Params.label.text | default .Site.Title) }}
             {{- if .Site.Title }}
-            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+            <a href="{{ "" | absLangURL }}" accesskey="h">
                 {{- if .Site.Params.label.icon }}
                 <img src="{{- .Site.Params.label.icon | absURL -}}" alt="logo" aria-label="logo"
                     height="{{- .Site.Params.label.iconHeight | default " 30px" -}}">
@@ -107,7 +107,7 @@
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
             <li>
-                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                <a href="{{ .URL | absLangURL }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="is-current-page" {{- end }}>
                     <span class=menu-item-logo><svg aria-hidden="true" class="big-content-icon"><use href="{{ "icons.svg" | absURL}}#{{ .Pre }}"></use></svg></span>
