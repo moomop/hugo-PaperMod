@@ -66,6 +66,34 @@ function setup_gallery(id) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
 }
 
+
+function setup_archive() {
+
+    
+    archive_years = document.getElementsByClassName('archive-year')
+    for (var i = 1; i < archive_years.length; i++){
+        var archive_months = archive_years[i].getElementsByClassName('archive-month');
+        for (var archive_month of archive_months){
+            archive_month.style.display = "none";
+          }       
+    }
+
+    for (var year_button of document.getElementsByClassName('year-button')){   
+      year_button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        var archive_months = this.closest('.archive-year').getElementsByClassName('archive-month');
+        for (var archive_month of archive_months){
+          //archive_month.toggle("hidden");
+          if (archive_month.style.display === "block") {
+              archive_month.style.display = "none";
+            } else {
+              archive_month.style.display = "block";
+            }
+        }
+      });
+    }
+}
+
 const themeInit = () => {
     var hamburger = document.getElementById('header-hamburger');
     var menu = document.getElementById('menu');
@@ -78,6 +106,7 @@ const themeInit = () => {
     for (var g of gallery_classes) {
         setup_gallery(g); 
     }
+    setup_archive()
 };
 
 

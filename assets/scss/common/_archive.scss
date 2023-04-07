@@ -3,9 +3,13 @@
 //    font-size: $regular-text;
 }
 
-//.archive-year {
-//    margin-top: 40px;
-//}
+.year-button::after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+}
+
+.year-button.active::after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
 
 .archive-year:not(:last-of-type) {
     border-bottom: 2px solid map-get($colors, 'light-grey');
