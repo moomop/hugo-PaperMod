@@ -3,50 +3,61 @@
 //    font-size: $regular-text;
 }
 
-.year-button::after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+.archive-year:first-of-type {
+    border-top: 1px solid map-get($colors, 'light-grey');
+}
+.archive-year{
+    border-bottom: 1px solid map-get($colors, 'light-grey');;
 }
 
-.year-button.active::after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+.archive-year-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: $large-text;
+    padding: 0.1em 0.3em;
+    color: map-get($colors, 'dark-grey');
+} 
+
+.archive-year-header:hover, .archive-year-header:active {
+    background-color: map-get($colors, 'cn-pale-cream');
+
+} 
+
+.archive-arrow {
+    width: 1em;
+    height: 1em;
+    transition: transform 0.2s ease-in-out;
 }
 
-.archive-year:not(:last-of-type) {
-    border-bottom: 2px solid map-get($colors, 'light-grey');
+.archive-year.hidden .archive-arrow {
+    transform: rotate(-90deg);
 }
 
-// .archive-month {
-//     display: flex;
-//     align-items: flex-start;
-//     padding: 10px 0;
-// }
 
-//.archive-month-header {
-//margin: 25px 0;
-//    width: 200px;
-//}
+.archive-month {
+    transition: max-height 0.5s;
+	overflow: hidden;
+	&[aria-hidden="true"] {
+		max-height: 0;
+	}
+	&[aria-hidden="false"] {
+		max-height: var(--containerHeight, 1000px);
+	}
+}
 
-// .archive-month:not(:last-of-type) {
-//     border-bottom: 1px solid map-get($colors, 'light-grey');
-// }
-// 
+
 .archive-entry {
   position: relative;
-  //padding: 5px;
   margin: 10px 0;
 }
-
-//.archive-entry-title {
-//    margin: 5px 0;
-//    font-weight: 400;
-//}
 
 .archive-count,
 .archive-meta {
     color: map-get($colors, 'mid-grey');
     font-size: $small-text;
 }
-
 
 // adding custom marker (will not be needed when safari supports content for ::marker class)
 ul.archive-posts li::before {

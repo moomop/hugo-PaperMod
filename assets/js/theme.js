@@ -66,33 +66,66 @@ function setup_gallery(id) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
 }
 
-
-function setup_archive() {
-
-    
-    archive_years = document.getElementsByClassName('archive-year')
-    for (var i = 1; i < archive_years.length; i++){
-        var archive_months = archive_years[i].getElementsByClassName('archive-month');
-        for (var archive_month of archive_months){
-            archive_month.style.display = "none";
-          }       
-    }
-
-    for (var year_button of document.getElementsByClassName('year-button')){   
-      year_button.addEventListener("click", function () {
-        this.classList.toggle("active");
-        var archive_months = this.closest('.archive-year').getElementsByClassName('archive-month');
-        for (var archive_month of archive_months){
-          //archive_month.toggle("hidden");
-          if (archive_month.style.display === "block") {
-              archive_month.style.display = "none";
-            } else {
-              archive_month.style.display = "block";
-            }
-        }
-      });
+function setHeights() {
+    var archive_months = document.getElementsByClassName('archive-month');
+    for (var archive_month of archive_months){
+        archive_month.removeAttribute("aria-hidden");
+        let heightOfContent = archive_month.getBoundingClientRect().height;
+        archive_month.style.setProperty("--containerHeight", `${heightOfContent}px`);
+        //archive_month.setAttribute("aria-hidden", "true");
     }
 }
+
+function setup_archive() {
+   
+
+    setHeights();
+
+
+    archive_years = document.getElementsByClassName('archive-year')
+    for (var i = 0; i < archive_years.length; i++){
+        if (i >0 ){
+            archive_years[i].classList.toggle("hidden");
+        }
+        var archive_months = archive_years[i].getElementsByClassName('archive-month');
+        for(var archive_month of archive_months){
+            archive_month.setAttribute(
+				"aria-hidden",
+				archive_years[i].classList.contains("hidden") ? "true" : "false"
+		);
+        }        
+    }
+
+
+
+
+
+    for (var year_button of document.getElementsByClassName('archive-year-header')){   
+      year_button.addEventListener("click", function (event) {
+ 
+        var archive_year = this.closest('.archive-year');
+        archive_year.classList.toggle("hidden");
+ 
+        var archive_months = archive_year.getElementsByClassName('archive-month');
+
+        for(var archive_month of archive_months){
+            archive_month.setAttribute(
+				"aria-hidden",
+				archive_year.classList.contains("hidden") ? "true" : "false"
+		);
+        }
+      });
+      
+    }
+
+    //for (var archive_month of document.getElementsByClassName('archive-month')){   
+    //    archive_month.addEventListener("click", function (event) {
+     //     this.closest('.archive-year').classList.toggle("hidden");
+     //     });
+     // }   
+}
+
+
 
 const themeInit = () => {
     var hamburger = document.getElementById('header-hamburger');
