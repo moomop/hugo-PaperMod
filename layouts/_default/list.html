@@ -53,7 +53,7 @@
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <div class="entry-thumbnail">
     {{ if $page.Params.thumbnailImage }}
-    <img alt="doodle for post" src="{{ .Permalink }}{{ $page.Params.thumbnailImage }}"/>
+    <img alt=" " src="{{ .Permalink }}{{ $page.Params.thumbnailImage }}"/>
     {{end}}
   </div>
   <div class="entry-text-wrapper">
