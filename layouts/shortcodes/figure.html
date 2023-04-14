@@ -14,8 +14,7 @@
          {{if and (eq $res.ResourceType "image") (ne $res.MediaType.SubType "svg") }}
          width="{{$res.Width}}"
          height="{{$res.Height}}"
-         {{ end }}
-    /> <!-- Closing img tag -->
+         {{ end }}/> <!-- Closing img tag -->
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
