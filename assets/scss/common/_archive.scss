@@ -18,6 +18,7 @@
     font-size: $large-text;
     padding: 0.1em 0.3em;
     color: map-get($colors, 'dark-grey');
+    width: 100%;
 } 
 
 .archive-year-header:hover, .archive-year-header:active {
@@ -37,14 +38,19 @@
 
 
 .archive-month {
-    transition: max-height 0.5s;
+    //transition: all 0.5s;
 	overflow: hidden;
-	&[aria-hidden="true"] {
-		max-height: 0;
-	}
-	&[aria-hidden="false"] {
-		max-height: var(--containerHeight, 1000px);
-	}
+	max-height: var(--containerHeight, 1000px);
+}
+.archive-month.hidden {
+    max-height: 0;
+    visibility: hidden;
+
+}
+
+h3.archive-month-header {
+margin: 1em 0.35em 0 0.5em;
+
 }
 
 

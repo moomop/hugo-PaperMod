@@ -84,15 +84,11 @@ function setup_archive() {
 
     archive_years = document.getElementsByClassName('archive-year')
     for (var i = 0; i < archive_years.length; i++){
-        if (i >0 ){
-            archive_years[i].classList.toggle("hidden");
-        }
         var archive_months = archive_years[i].getElementsByClassName('archive-month');
         for(var archive_month of archive_months){
-            archive_month.setAttribute(
-				"aria-hidden",
-				archive_years[i].classList.contains("hidden") ? "true" : "false"
-		);
+          if (archive_years[i].classList.contains('hidden')) {
+             archive_month.classList.toggle('hidden');
+          }
         }        
     }
 
@@ -102,27 +98,21 @@ function setup_archive() {
 
     for (var year_button of document.getElementsByClassName('archive-year-header')){   
       year_button.addEventListener("click", function (event) {
- 
         var archive_year = this.closest('.archive-year');
+        var archive_months = archive_year.getElementsByClassName('archive-month');
+        for(var archive_month of archive_months){
+            archive_month.style.transition='all 0.5s';
+            archive_month.classList.toggle('hidden')
+        };
+        
         archive_year.classList.toggle("hidden");
  
-        var archive_months = archive_year.getElementsByClassName('archive-month');
 
-        for(var archive_month of archive_months){
-            archive_month.setAttribute(
-				"aria-hidden",
-				archive_year.classList.contains("hidden") ? "true" : "false"
-		);
-        }
+
       });
-      
-    }
-
-    //for (var archive_month of document.getElementsByClassName('archive-month')){   
-    //    archive_month.addEventListener("click", function (event) {
-     //     this.closest('.archive-year').classList.toggle("hidden");
-     //     });
-     // }   
+    };
+    
+   
 }
 
 
