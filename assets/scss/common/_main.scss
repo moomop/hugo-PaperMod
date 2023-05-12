@@ -20,7 +20,7 @@
     letter-spacing: 1px;
 }
 
-.pagination a:hover {
+.pagination a:hover, .pagination a:focus {
     color: map-get($colors, 'dark-grey');
     text-decoration: none;
     
@@ -30,20 +30,22 @@
     margin-inline-start: auto;
 }
 
-// these are the icons under the intro post
+// social icons under the intro post
 
 .social-icons {
-    padding: 12px 0;
+    display: flex;
+    padding: 1em 0 0.75em 0;
+    gap: 0.8em;
 }
 
-.social-icons a:not(:last-of-type) {
-    margin-inline-end: 12px;
+.social-icons a:hover, .social-icons a:focus {
+    text-decoration: none;
+    color: darken(map-get($colors, 'cn-coral'), 7);
 }
 
-.social-icons a svg {
-    height: 26px;
-    width: 26px;
-    display: inline;
+.social-icons svg {
+    height: 2em;
+    width: 2em;
 }
 
 // check this - move to basic elements??

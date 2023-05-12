@@ -20,9 +20,12 @@
     color: inherit;
     }
 
-.footer a:hover {
+.footer a:hover, 
+.footer a:focus
+  {
     color: map-get($colors, 'mid-grey');
     }
+
     
 
 // .top-link is the return to top button
