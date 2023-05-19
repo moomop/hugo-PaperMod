@@ -70,7 +70,7 @@
 #menu li::after {
     content: "";
     position: absolute;
-    background-color: map-get($colors, 'cn-coral');
+    background-color: map-get($colors, 'cn-light-coral');
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 100%;

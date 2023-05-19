@@ -38,9 +38,13 @@
     gap: 0.8em;
 }
 
+.social-icons a {
+    color: map-get($colors, 'cn-light-coral');
+}
+
 .social-icons a:hover, .social-icons a:focus {
     text-decoration: none;
-    color: darken(map-get($colors, 'cn-coral'), 7);
+    color: darken(map-get($colors, 'cn-light-coral'), 7);
 }
 
 .social-icons svg {
