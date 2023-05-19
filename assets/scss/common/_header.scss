@@ -77,12 +77,12 @@
     left: calc(50% - 0.35rem);
     bottom: -13px;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-out;
 }
     
 #menu li:hover::after {
     opacity: 1.0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in;
 }
 
 #menu .menu-item-logo {
