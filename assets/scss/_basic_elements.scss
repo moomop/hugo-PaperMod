@@ -249,7 +249,7 @@ hr + :is(h2, h3, h4) {
 
 // images
 
-img {
+img, iframe {
 	border-radius: $border-radius-default;
     display: block;
     max-width: 100%;
@@ -258,7 +258,7 @@ img {
 
 // figures
 
-figure {
+figure, iframe {
 margin: 1.2*$regular-margin auto;
 
     figcaption {
