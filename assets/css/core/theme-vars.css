@@ -1,4 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* arvo-regular - latin */
+@font-face {
+    font-family: 'Arvo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Arvo/Arvo-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* arvo-italic - latin */
+  @font-face {
+    font-family: 'Arvo';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/Arvo/Arvo-Italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* arvo-700 - latin */
+  @font-face {
+    font-family: 'Arvo';
+    font-style: normal;
+    font-weight: 700;
+    src:  url('../fonts/Arvo/Arvo-Bold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* arvo-700italic - latin */
+  @font-face {
+    font-family: 'Arvo';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/Arvo/Arvo-BoldItalic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+
+
+ /* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* lato-italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src:  url('../fonts/Lato/Lato-Bold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  
+  /* lato-700italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/Lato/Lato-BoldItalic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+
 
 :root {
     --gap: 24px;
