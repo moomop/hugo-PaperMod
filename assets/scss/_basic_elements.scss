@@ -17,7 +17,7 @@ html, body {
 html {
     font-family:    "Lato", sans-serif;
     font-weight:    400;
-    font-size:      18px;
+    font-size:      1.125em;
     line-height:    $regular-line-height;
     -webkit-text-size-adjust: 100%;
     // to consider breaks jump links on refresh in safari 
@@ -256,9 +256,9 @@ img, iframe {
     
 }
 
-// figures
+// figures and video
 
-figure, iframe {
+figure, iframe, video {
 margin: 1.2*$regular-margin auto;
 
     figcaption {
